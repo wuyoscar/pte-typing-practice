@@ -23,7 +23,7 @@ This Python script is designed for PTE (Pearson Test of English) test takers who
 - To format a specific file:
 
 ```shell
-  python formatter.py --file yourfile.txt
+  python formatter.py --file your_raw_file.txt
 ```
 
 - To process the entire `raw_txt` directory:
