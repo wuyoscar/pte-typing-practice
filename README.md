@@ -25,19 +25,19 @@ This Python script is designed for PTE (Pearson Test of English) test takers who
 - To format a specific file:
 
 ```shell
-  python formatter.py --file your_raw_file.txt
+  python pte_formatter.py --file your_raw_file.txt
 ```
 
 - To process the entire `raw_txt` directory:
 
 ```shell
-  python formatter.py --directory
+  python pte_formatter.py --directory
 ```
 
 - To generate a 10fastfingers practice link for a specific file and open it in your browser:
 
 ```shell
-  python formatter.py --open your_raw_file.txt
+  python pte_formatter.py --open your_raw_file.txt
 ```
 
 After running the above command, the link will be printed to the console, and it will also be opened in your default web browser for immediate typing practice.
