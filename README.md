@@ -1,47 +1,52 @@
-## PTE Typing Practice Formatter
 
-**Description:**  
-This Python script is designed for PTE (Pearson Test of English) test takers who want to practice their typing skills using real test material. The tool converts given English text files to a format suitable for the website 10fastfingers and generates a link for practice, making it easy to practice typing with customized content.
+## PTE 打字练习格式化工具
 
-**Folder Structure:**
-\```
+**描述：**  
+此 Python 脚本是为 PTE（Pearson 英语测试）考生设计的，帮助他们使用真实的测试材料练习打字技巧。此工具可以将给定的英文文本文件转换为适合 10fastfingers 网站的格式，并生成一个供练习的链接，使自定义内容的打字练习变得简单。
+
+**文件结构：**
+```shell
 .
 ├── formatter.py
 ├── raw_txt/
 └── fast_txt/
-\```
+```
 
-- `formatter.py`: This is the main script that does the formatting and link generation.
-- `raw_txt/`: Place all your raw text files in this directory that you want to format.
-- `fast_txt/`: The formatted files will be saved in this directory.
 
-**Usage:**  
 
-1. Place your raw English text files inside the `raw_txt` folder.
-2. Run the formatter script as described below:
+- `formatter.py`: 这是执行格式化和链接生成的主脚本
+- `raw_txt/`: 这是执行格式化和链接生成的主脚本
+- `fast_txt/`: 这是执行格式化和链接生成的主脚本
 
-- To format a specific file:
+**使用方法:**  
 
-  \```bash
+1. 将您的原始英文文本文件放入 `raw_txt` 文件夹中。
+2. 按照以下说明运行格式化脚本：
+
+- 要格式化特定的文件：
+
+```shell
   python formatter.py --file yourfile.txt
-  \```
+```
 
-- To process the entire `raw_txt` directory:
+- 要处理整个 `raw_txt` 目录
 
-  \```bash
+```shell
   python formatter.py --directory
-  \```
+  ```
 
-- To generate a 10fastfingers practice link for a specific file and open it in your browser:
+- 要为特定文件生成 10fastfingers 练习链接并在浏览器中打开:
 
-  \```bash
+```shell
   python formatter.py --open your_raw_file.txt
-  \```
+  ```
 
-After running the above command, the link will be printed to the console, and it will also be opened in your default web browser for immediate typing practice.
+运行上述命令后，链接将打印到控制台，并将在您的默认网页浏览器中打开，以便立即进行打字练习。
 
-**Notes:**  
-This tool retains the order of words and punctuation from the input file in the generated link. It also treats hyphenated words as single entities to ensure accuracy in practice.
+**注意事项:**  
+此工具在生成的链接中保留了输入文件的单词和标点的顺序。它还将连字符连接的单词视为单个实体，以确保练习的准确性。
 
-**Benefits:**  
-Practicing with real PTE material can provide a more realistic experience and better preparation for the actual test.
+
+
+**好处:**  
+使用真实的 PTE 材料进行练习可以提供更真实的体验，并更好地为实际测试做准备。
