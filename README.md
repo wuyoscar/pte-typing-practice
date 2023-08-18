@@ -1,9 +1,11 @@
 ## PTE Typing Practice Formatter
 
 **Description:**  
-This Python script is designed for PTE (Pearson Test of English) test takers who want to practice their typing skills using real test material. The tool converts given English text files to a format suitable for the website 10fastfingers and generates a link for practice, making it easy to practice typing with customized content.
+This Python script is designed for PTE (Pearson Test of English) test takers who want to practice their typing skills using real test material. The tool converts given English text files to a format suitable for the website 10fastfingers and generates a link for practice, making it easy to practice typing with customized content. 
 
+- Updated with spelling check
 **Folder Structure:**
+
 ```shell
 .
 ├── formatter.py
