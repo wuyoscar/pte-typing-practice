@@ -43,6 +43,18 @@
 
 运行上述命令后，链接将打印到控制台，并将在您的默认网页浏览器中打开，以便立即进行打字练习。
 
+3. 例子当我有一下文本在 `raw_txt/sports_star.txt`
+![](/imgs/example_1.png)
+
+执行操作
+```shell
+python formatter.py --open sports_star.txt
+```
+
+然后就可以开打了
+
+![](/imgs/example_2.png)
+
 **注意事项:**  
 此工具在生成的链接中保留了输入文件的单词和标点的顺序。它还将连字符连接的单词视为单个实体，以确保练习的准确性。
 
