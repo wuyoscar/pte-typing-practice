@@ -4,6 +4,7 @@
 **描述：**  
 此 Python 脚本是为 PTE（Pearson 英语测试）考生设计的，帮助他们使用真实的测试材料练习打字技巧。此工具可以将给定的作文文本转换为适合 10fastfingers 网站的格式，并生成一个供练习的链接，用作于pte机考的打字spelling随便背一下作文模版:)
 
+- 增加了单词纠错功能, 可以在`formatter.py`里面设置`False`关闭纠正功能
 **文件结构：**
 ```shell
 .
@@ -56,6 +57,11 @@ python formatter.py --open sports_star.txt
 
 ![](/imgs/example_2.png)
 
+4. requirements 
+
+```shell 
+pip install -r requirements.txt
+```
 **注意事项:**  
 此工具在生成的链接中保留了输入文件的单词和标点的顺序。它还将连字符连接的单词视为单个实体，以确保练习的准确性。
 
