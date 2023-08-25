@@ -5,14 +5,20 @@ import urllib.parse
 import webbrowser
 from autocorrect import Speller
 
-class Converter:
-    def __init__(self, spell = True):
+class OConverter:
+    def __init__(self, spell_check = True, skip_header = True ):
+        # added spell check
+        # added skip header 
         self.source_directory = 'raw_txt'
         self.destination_directory = 'fast_txt'
-        self.spell = spell
+        self.spell = spell_check
+        self.skip_header = skip_header
 
     
     def format_text(self, text):
+        if self.skip_header:
+            text = re.sub(r'-\s?.*?(?:\n|$)', '', text, flags=re.MULTILINE)
+        
         # Extract English words and punctuation
         items = re.findall(r'\b[a-zA-Z]+(?:-[a-zA-Z]+)*\'?[a-zA-Z]*\b|[.,!?;]', text)
         
@@ -63,10 +69,10 @@ class Converter:
             if filename.endswith(".txt"):
                 self.convert_file(filename)
                 
-    def generate_link(self, formatted_text, duration=300, shuffle=0):
+    def generate_link(self, formatted_text, duration_inSec: int=540, shuffle=0) -> str:
         base_url = "https://10fastfingers.com/widget/typingtest"
         params = {
-            "dur": duration,
+            "dur": duration_inSec,
             "rand": shuffle,
             "words": formatted_text
         }
@@ -105,7 +111,7 @@ if __name__ == '__main__':
         
     args = parser.parse_args()
     
-    converter = Converter()
+    converter = OConverter()
     
     if args.file:
         converter.convert_file(args.file)
