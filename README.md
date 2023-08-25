@@ -3,10 +3,12 @@
 
 **描述：**  
 
-点右上角链接🔗
+🔗 at top-right corner
   
+![Demo](imgs/output.gif)
 
-**文件结构：如果你需要当成一个收集仓库使用 or 直接点击右上角链接webapp**
+
+**File Structure; Read the following guide if you plan to use this as a collection repository; if not, directly click the web app link at the top right**
 ```shell
 .
 ├── pte_formatter.py
@@ -20,30 +22,30 @@
 - `raw_txt/:` The folder where your raw English text files should be placed for formatting.
 - `fast_txt/:` Folder containing formatted text files.
 
-**使用方法:**  
+**How to use:**  
 
-1. 将您的原始英文文本文件放入 `raw_txt` 文件夹中。
-2. 按照以下说明运行格式化脚本：
+1. Place your raw English text files into the `raw_txt` folder。
+2. Run the formatting script as per the following instruction：
 
-- 要格式化特定的文件：
+- To format a specific file:
 
 ```shell
   python pte_formatter.py --file yourfile.txt
 ```
 
-- 要处理整个 `raw_txt` 目录
+- To process the entire `raw_txt` directory:
 
 ```shell
   python pte_formatter.py --directory
   ```
 
-- 要为特定文件生成 10fastfingers 练习链接并在浏览器中打开:
+- To generate a 10fastfingers practice link for a specific file and open it in a browser:
 
 ```shell
   python pte_formatter.py --open your_raw_file.txt
   ```
 
-运行上述命令后，链接将打印到控制台，并将在您的默认网页浏览器中打开，以便立即进行打字练习。
+After running the above commands, the link will be printed to the console and will open in your default web browser for immediate typing practice.
 
 3. requirements 
 
@@ -51,19 +53,18 @@
 pip install -r requirements.txt
 ```
 ## **例子:**
-比如当我有一下文本在 `raw_txt/sports_star.txt`
+For example, when I have the following text in `raw_txt/sports_star.txt`
 ![](/imgs/example_1.png)
 
-执行操作
+Run the command:
 ```shell
 python formatter.py --open sports_star.txt
 ```
 
-然后就可以开打了
+And then you can start practicing.
 
 ![](/imgs/example_2.png)
 
-
-**注意事项:**  
-此工具在生成的链接中保留了输入文件的单词和标点的顺序。它还将连字符连接的单词视为单个实体，以确保练习的准确性。
+**Note:**
+This tool preserves the order of words and punctuation in the generated link. It also treats hyphenated words as single entities to ensure the accuracy of the practice.
 

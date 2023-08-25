@@ -6,7 +6,7 @@ import webbrowser
 from autocorrect import Speller
 
 class OConverter:
-    def __init__(self, spell_check = True, skip_header = True ):
+    def __init__(self, spell_check = True, skip_header = False ):
         # added spell check
         # added skip header 
         self.source_directory = 'raw_txt'
