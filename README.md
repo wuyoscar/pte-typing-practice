@@ -52,7 +52,7 @@ After running the above commands, the link will be printed to the console and wi
 ```shell 
 pip install -r requirements.txt
 ```
-## **例子:**
+## **Example:**
 For example, when I have the following text in `raw_txt/sports_star.txt`
 ![](/imgs/example_1.png)
 
