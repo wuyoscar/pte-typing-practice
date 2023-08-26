@@ -5,7 +5,8 @@
 
 🔗 at top-right corner
   
-![Demo](imgs/output.gif)
+
+<img src="imgs/output.gif" alt="Demo" width="255" height="164">
 
 
 **File Structure**: Read the following guide if you plan to use this as a collection repository; if not, directly click the web app link at the top right
