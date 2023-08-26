@@ -54,9 +54,6 @@ class OConverter:
         else:
             raise Exception(f"Could not decode {filename} with any of the tried encodings.")
                 
-        with open(input_filepath, 'r') as file:
-            content = file.read()
-        assert type(content) == str, f"Error: {content[:10]} does not exist!"
         
         # Format the content
         result = self.format_text(content)
