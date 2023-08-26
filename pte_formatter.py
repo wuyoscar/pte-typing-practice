@@ -43,7 +43,7 @@ class OConverter:
         
         assert os.path.exists(input_filepath), f"Error: {input_filepath} does not exist!"
         
-        with open(input_filepath, 'r') as file:
+        with open(input_filepath, 'r', encoding='utf-8') as file:
             content = file.read()
         assert type(content) == str, f"Error: {content[:10]} does not exist!"
         
