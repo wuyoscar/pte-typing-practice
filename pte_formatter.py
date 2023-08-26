@@ -4,6 +4,7 @@ import argparse
 import urllib.parse
 import webbrowser
 from autocorrect import Speller
+import codecs
 
 class OConverter:
     def __init__(self, spell_check = True, skip_header = False ):
@@ -42,7 +43,17 @@ class OConverter:
         input_filepath = os.path.join(self.source_directory, filename)
         
         assert os.path.exists(input_filepath), f"Error: {input_filepath} does not exist!"
-        
+        encodings = ['utf-8', 'iso-8859-1', 'windows-1252']
+        for encoding in encodings:
+            try:
+                with codecs.open(input_filepath, 'r', encoding=encoding) as file:
+                    content = file.read()
+                break
+            except UnicodeDecodeError:
+                pass
+        else:
+            raise Exception(f"Could not decode {filename} with any of the tried encodings.")
+                
         with open(input_filepath, 'r') as file:
             content = file.read()
         assert type(content) == str, f"Error: {content[:10]} does not exist!"
@@ -55,7 +66,7 @@ class OConverter:
         output_filepath = os.path.join(self.destination_directory, output_filename)
         
         # Write the result to the output file
-        with open(output_filepath, 'w') as file:
+        with open(output_filepath, 'w', encoding='utf-8') as file:
             file.write(self.format_lines(result))
         return result 
     
@@ -69,7 +80,7 @@ class OConverter:
             if filename.endswith(".txt"):
                 self.convert_file(filename)
                 
-    def generate_link(self, formatted_text, duration_inSec: int=540, shuffle=0) -> str:
+    def generate_link(self, formatted_text, duration_inSec: int=60, shuffle=0) -> str:
         base_url = "https://10fastfingers.com/widget/typingtest"
         params = {
             "dur": duration_inSec,
